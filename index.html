@@ -78,7 +78,7 @@
   <section id="open-source" class="section reveal">
     <p class="section-kicker">02 / OUT IN THE OPEN</p>
     <h2>Contributing upstream.</h2>
-    <p class="section-lede">The same discipline applied to the project everything else runs on top of.</p>
+    <p class="section-lede">The same discipline applied to the projects everything else runs on top of: Kubernetes, Prometheus, and Meshery.</p>
 
     <article class="case case-wide reveal">
       <p class="case-index">KEP-6312 · kubernetes/enhancements</p>
@@ -88,6 +88,57 @@
       <p class="case-highlight">Verify real behavior, not surface-level success.</p>
       <div class="case-tags"><span>Go</span><span>kube-apiserver</span><span>sig-network</span></div>
       <a class="case-link" href="https://github.com/kubernetes/enhancements/pull/6316" target="_blank" rel="noopener">View the PR on GitHub ↗</a>
+    </article>
+
+    <div class="cases" style="margin-top: 1.5rem;">
+      <article class="case reveal">
+        <p class="case-index">prometheus/alertmanager</p>
+        <h3>Reporting real SMTP failure reasons.</h3>
+        <p>Open PR to Alertmanager's email notifier: report the actual failure reason from SMTP reply codes instead of a generic send error, so operators can tell a bad recipient address from a rejected relay without digging through logs.</p>
+        <div class="case-tags"><span>Go</span><span>SMTP</span></div>
+        <a class="case-link" href="https://github.com/prometheus/alertmanager/pull/5533" target="_blank" rel="noopener">View the PR ↗</a>
+      </article>
+
+      <article class="case reveal">
+        <p class="case-index">meshery/meshery · meshkit · schemas</p>
+        <h3>13 pull requests to Meshery.</h3>
+        <p>Ongoing contributions to the Meshery service-mesh management plane (CNCF): a path-traversal and script-injection fix in the registry's SVG upload path, a goroutine-lifecycle race that could panic on a closed channel, and a run of schema and API-contract corrections.</p>
+        <div class="case-tags"><span>Go</span><span>TypeScript</span><span>Security</span></div>
+        <a class="case-link" href="https://github.com/meshery/meshery/pull/22028" target="_blank" rel="noopener">View the security fix ↗</a>
+      </article>
+    </div>
+
+    <p class="section-lede" style="margin-top: 3rem; margin-bottom: 1.5rem;">Tools built for the same problems, released as standalone utilities.</p>
+
+    <div class="cases cases-triple">
+      <article class="case reveal">
+        <p class="case-index">dnspreflight</p>
+        <h3>ACME DNS-01 preflight checks.</h3>
+        <p>Checks DNS-01 ACME challenge propagation at authoritative nameservers, the same check cert-manager runs internally, before you wait on a timeout to find out it failed.</p>
+        <a class="case-link" href="https://github.com/MU5A/dnspreflight" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+
+      <article class="case reveal">
+        <p class="case-index">alertmanager-slack-threader</p>
+        <h3>Threaded Slack alerts.</h3>
+        <p>Relays Alertmanager webhook notifications into threaded Slack replies instead of a new message per notification, keeping incident channels readable.</p>
+        <a class="case-link" href="https://github.com/MU5A/alertmanager-slack-threader" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+
+      <article class="case reveal">
+        <p class="case-index">synthetic-monitoring-blackbox</p>
+        <h3>Synthetic uptime checks.</h3>
+        <p>Blackbox Exporter and Prometheus wired together for synthetic uptime and latency checks with alerting, deployable as a self-contained kit.</p>
+        <a class="case-link" href="https://github.com/MU5A/synthetic-monitoring-blackbox" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+    </div>
+
+    <article class="case case-wide reveal" style="margin-top: 1.5rem;">
+      <p class="case-index">Quran Unlock · mobile app · 300,000+ users</p>
+      <h3>Contributor to a habit-building app read by hundreds of thousands.</h3>
+      <p>Quran Unlock locks distracting apps (Instagram, TikTok, X, YouTube) after each prayer time until the user reads a few minutes of Quran. Working closely with co-founders Yacine Alloul and Muhammad Khalifa on product direction, I shipped dark mode support, localization and copy fixes across the app's language packs, and UX polish.</p>
+      <div class="case-tags"><span>React Native</span><span>Swift</span><span>Expo</span></div>
+      <a class="case-link" href="https://quranunlock.app/" target="_blank" rel="noopener">Visit Quran Unlock ↗</a>
     </article>
   </section>
 
