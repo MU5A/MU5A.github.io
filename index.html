@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musa Bashir — Platform Engineer</title>
+<meta name="description" content="Musa Bashir, platform engineer building Kubernetes infrastructure for AI agents, and contributing upstream to Kubernetes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header class="nav">
+  <span class="nav-mark">MB</span>
+  <nav class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#open-source">Open source</a>
+    <a href="#approach">Approach</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="nav-cta" href="https://github.com/MU5A" target="_blank" rel="noopener">GitHub ↗</a>
+</header>
+
+<main>
+
+  <section class="hero">
+    <p class="kicker">PLATFORM ENGINEER · KUBERNETES · AI INFRASTRUCTURE</p>
+    <h1>The infrastructure<br><span class="accent">AI agents</span> run on.</h1>
+    <p class="hero-sub">I'm Musa. I build and operate the Kubernetes platforms that keep AI agent products reliable in production, and I contribute the same rigor upstream to Kubernetes itself.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#work">Explore my work</a>
+      <a class="btn btn-ghost" href="https://github.com/MU5A" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="hero-role">Co-founder & Platform Engineer, <strong>SaaSPro Labs</strong></p>
+
+    <div class="hero-panel">
+      <div class="panel-row"><span class="panel-index">01</span><span>AI agent infrastructure</span><span class="panel-tag">Kubernetes · GitOps</span></div>
+      <div class="panel-row"><span class="panel-index">02</span><span>Multi-cluster platform design</span><span class="panel-tag">EKS · Namespace isolation</span></div>
+      <div class="panel-row"><span class="panel-index">03</span><span>Kubernetes upstream</span><span class="panel-tag">sig-network · KEP-6312</span></div>
+    </div>
+  </section>
+
+  <section class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Kubernetes</span><span>Terraform</span><span>Python</span><span>Go</span><span>Prometheus</span><span>ArgoCD</span><span>AWS EKS</span><span>Docker</span>
+      <span>Kubernetes</span><span>Terraform</span><span>Python</span><span>Go</span><span>Prometheus</span><span>ArgoCD</span><span>AWS EKS</span><span>Docker</span>
+    </div>
+  </section>
+
+  <section id="work" class="section reveal">
+    <p class="section-kicker">01 / SELECTED ENGINEERING WORK</p>
+    <h2>Infrastructure is the product.</h2>
+    <p class="section-lede">At SaaSPro Labs, I own the systems that make AI agents dependable, not just demoable.</p>
+
+    <div class="cases">
+      <article class="case reveal">
+        <p class="case-index">01 — AI AGENT INFRASTRUCTURE</p>
+        <h3>Platforms that hold up under real usage.</h3>
+        <p>Kubernetes infrastructure powering AI agents for health insurance operations across Africa and the Gulf. Multi-cluster, namespace-isolated platform design, GitOps delivery, and live version upgrades with zero disruption to running workloads.</p>
+        <p class="case-highlight">On-call ownership for systems a business runs on daily.</p>
+        <div class="case-tags"><span>Kubernetes</span><span>EKS</span><span>GitOps</span></div>
+      </article>
+
+      <article class="case reveal">
+        <p class="case-index">02 — PLATFORM DESIGN</p>
+        <h3>A two-cluster platform, built for isolation.</h3>
+        <p>Designed and scaffolded a namespace-isolated, two-cluster EKS platform from scratch, separating environments cleanly at the infrastructure layer rather than trusting convention to keep them apart.</p>
+        <p class="case-highlight">Isolation as a property of the architecture, not a policy.</p>
+        <div class="case-tags"><span>Terraform</span><span>AWS EKS</span><span>Architecture</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="open-source" class="section reveal">
+    <p class="section-kicker">02 / OUT IN THE OPEN</p>
+    <h2>Contributing upstream.</h2>
+    <p class="section-lede">The same discipline applied to the project everything else runs on top of.</p>
+
+    <article class="case case-wide reveal">
+      <p class="case-index">KEP-6312 · kubernetes/enhancements</p>
+      <h3>Relaxed validation for HostAliases hostnames.</h3>
+      <p>Authored a Kubernetes Enhancement Proposal to sig-network, relaxing <code>hostAliases[].hostnames</code> validation behind a feature gate to accept trailing-dot FQDN notation, standard Unix hosts-file syntax that kube-apiserver currently rejects outright with no workaround.</p>
+      <p>The proposal was shaped directly by a previous KEP's regression: a DNS validation fix that worked under glibc but silently broke resolution under musl libc (Alpine). The test plan here requires verifying actual hostname resolution inside both glibc and musl containers, not just confirming the API server accepts the object.</p>
+      <p class="case-highlight">Verify real behavior, not surface-level success.</p>
+      <div class="case-tags"><span>Go</span><span>kube-apiserver</span><span>sig-network</span></div>
+      <a class="case-link" href="https://github.com/kubernetes/enhancements/pull/6316" target="_blank" rel="noopener">View the PR on GitHub ↗</a>
+    </article>
+  </section>
+
+  <section id="approach" class="section reveal">
+    <p class="section-kicker">03 / HOW I THINK</p>
+    <h2>Own the whole path.</h2>
+    <p class="section-lede">From design to production traffic, and whoever's on call when it breaks.</p>
+
+    <div class="principles">
+      <div class="principle reveal">
+        <span class="principle-index">01</span>
+        <h3>Verify real behavior.</h3>
+        <p>An API accepting an object isn't the same as the system working. Test what actually happens at runtime, across the environments that matter.</p>
+      </div>
+      <div class="principle reveal">
+        <span class="principle-index">02</span>
+        <h3>Change should be reversible.</h3>
+        <p>Feature-gated, additive rollouts. Nothing ships in a way that can't be dialed back without taking workloads down with it.</p>
+      </div>
+      <div class="principle reveal">
+        <span class="principle-index">03</span>
+        <h3>Isolation is architecture, not policy.</h3>
+        <p>Boundaries that matter get built into the infrastructure itself, not enforced by convention or a note in a runbook.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section reveal contact">
+    <p class="section-kicker">LET'S CONNECT</p>
+    <h2>Building something<br>that needs to hold up?</h2>
+    <p class="section-lede">AI infrastructure, Kubernetes platforms, and the systems underneath them. That's where I work.</p>
+    <div class="contact-links">
+      <a href="https://github.com/MU5A" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://linkedin.com/in/musabashir" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://x.com/mousabashir_" target="_blank" rel="noopener">X ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>Musa Bashir</span>
+  <span>Built with plain HTML, CSS, and JS.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
